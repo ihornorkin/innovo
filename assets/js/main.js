@@ -29,8 +29,7 @@ $('#feedback-slider').slick({
   {
     breakpoint: 768,
     settings: {
-      adaptiveHeight: false,
-      vertical: true
+      adaptiveHeight: true
     }
   }
   ]
@@ -219,11 +218,35 @@ if (!document.getElementsByClassName) {
           $(this).parent().parent().find('.form-title').css('opacity', '1');
         });
 
+$(window).resize(function(e) {
+if ($(window).width() < 768) {
         $('.burger-menu').on('click', function(event) {
           $(this).toggleClass('menu-on');
           $('.navigation').toggleClass('navigation-open');
           $('body').toggleClass('menu-open');
         });
+
+        $('.navigation-list a').on('click', function(event) {
+          $('.burger-menu').toggleClass('menu-on');
+          $('.navigation').toggleClass('navigation-open');
+          $('body').toggleClass('menu-open');
+        });
+}
+});
+
+if ($(window).width() < 768) {
+        $('.burger-menu').on('click', function(event) {
+          $(this).toggleClass('menu-on');
+          $('.navigation').toggleClass('navigation-open');
+          $('body').toggleClass('menu-open');
+        });
+
+        $('.navigation-list a').on('click', function(event) {
+          $('.burger-menu').toggleClass('menu-on');
+          $('.navigation').toggleClass('navigation-open');
+          $('body').toggleClass('menu-open');
+        });
+}
 
         $('input[type="tel"]').inputmask({
           mask: '+38 (999) 999-9999',
@@ -249,17 +272,17 @@ if (!document.getElementsByClassName) {
           $('body,html').animate({scrollTop:0},1000);
         });
 
-/*        var leaveCounter = 0;
+        var leaveCounter = 0;
 
-        function inWindow(element, id) {
+/*        function inWindow(element, id) {
           if ($(document).scrollTop() + $(window).height() > $(element).offset().top && $(document).scrollTop() - $(element).offset().top < $(element).height() && !$(element).hasClass('showed')) {
             dataLayer.push({'event': 'viewSection',   'section_id': id});
             $(element).addClass('showed');
-          }
-          if ($(document).scrollTop() > $(element).height() + $(element).offset().top || $(document).scrollTop() < $(element).offset().top) {
-            $(element).removeClass('showed');
+            dataLayer.push({'event': 'viewSection',   'section_id': id});
           }
         }
+
+
 
         $(window).scroll(function() {
           inWindow('#header', 'header');
@@ -272,6 +295,7 @@ var header = new Waypoint({
 element: document.getElementById('header'),
   handler: function() {
     dataLayer.push({'event': 'viewSection',   'section_id': 'header'});
+    console.log(dataLayer);
   }
 });
 
@@ -279,6 +303,7 @@ var price = new Waypoint({
 element: document.getElementById('price'),
   handler: function() {
     dataLayer.push({'event': 'viewSection',   'section_id': 'price'});
+    console.log(dataLayer);
   }
 });
 
@@ -286,6 +311,7 @@ var team = new Waypoint({
 element: document.getElementById('team'),
   handler: function() {
     dataLayer.push({'event': 'viewSection',   'section_id': 'team'});
+    console.log(dataLayer);
   }
 });
 
@@ -293,10 +319,46 @@ var phil = new Waypoint({
 element: document.getElementById('phil'),
   handler: function() {
     dataLayer.push({'event': 'viewSection',   'section_id': 'phil'});
+    console.log(dataLayer);
   }
 });
 
-      });
+     });
+
+
+/**
+ * UTM Tracking Code
+ * @param {*} name - name current UTM
+ */
+function getUTM(name) {
+  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
+    results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+var client_id;
+function get_cookie ( cookie_name ){
+    var results = document.cookie.match ( '(^|;) ?' + cookie_name + '=([^;]*)(;|$)' );
+    if ( results )
+      return ( decodeURIComponent( results[2] ) );
+    else
+      return null;
+  }
+
+    var cook_ga;
+    $(document).ready(function(){
+      var cookie_check = setInterval(function(){
+        var ga = get_cookie('_ga');
+        if (ga === null) {
+          console.log('☹️');
+        }else {
+          cook_ga = "&_ga="+get_cookie('_ga');
+          client_id = cook_ga.split('.')[2]+'.'+cook_ga.split('.')[3];
+          console.log('🙂');
+        };
+      }, 500);
+    });
 
 /* Form validation and load politics */
 
@@ -307,12 +369,13 @@ $(function() {
 
   $('.land-button').click(function() {
     btnId = $(this).attr('id');
-    console.log(btnId);
+    // console.log(btnId);
   });
 
   $("[name=send]").click(function () {
     $(":input.error").removeClass('error');
     $(".allert").remove();
+
 
     var error;
     var btn = $(this);
@@ -322,7 +385,28 @@ $(function() {
     var send_options = btn.closest('form').find('[name=campaign_token]');
     var name_tl = btn.closest('form').find('[type=text]').val();
     var phone_tl = btn.closest('form').find('[type=tel]').val();
+    var lead_type = btn.closest('form').data('lead');
+    var form_type = btn.closest('form').data('form');
     var btnType;
+    var utm_source = getUTM('utm_source');
+    var utm_term = getUTM('utm_term');
+    var utm_content = getUTM('utm_content');
+    var utm_campaign = getUTM('utm_campaign');
+    var utm_medium = getUTM('utm_medium');
+    msg += '&name=' + name_tl;
+    msg += '&phone=' + phone_tl;
+    msg += '&hostname=' + window.location.host;
+    msg += '&page_url=' + window.location;
+    msg += '&ref=' + document.referrer;
+    msg += '&number_of_button=' + btnId;
+    msg += '&client_id=' + client_id;
+    msg += '&lead_type=' + lead_type;
+    msg += '&form_type=' + form_type;
+    msg += '&utm_source=' + utm_source;
+    msg += '&utm_term=' + utm_term;
+    msg += '&utm_content=' + utm_content;
+    msg += '&utm_campaign=' + utm_campaign;
+    msg += '&utm_medium=' + utm_medium;
 
     if (btn.hasClass('window-popup')) {
       btnType = 'popupForm';
@@ -367,38 +451,31 @@ $(function() {
       $(send_options).each(function() {
         $('#sending').append('<p class="sending">Отправка данных...</p>');
         $('#sending').slideDown('400');
-        if ($(this).val() == '') {
           $.ajax({
             type: 'POST',
             url: 'mail.php',
             data: msg,
             success: function() {
               dataLayer.push({
-  'event': 'formSubmit',  // всегда значение 'formSubmit'
-  'formType': btnType,  //варианты: 'mainForm' - для формы на лэнде, 'popupForm' - для обычного попапа http://joxi.ru/V2V5MQLI0xwOGm , 'offerPopupForm' для этого попапа http://joxi.ru/1A5ZwNxtKn9xWr
-'lastCTA': btnId // id кнопки, по которой отобразился попап http://joxi.ru/V2V5MQLI0xwOGm , если регистрация по другой форме, то '(not set)'
-});
+              'event': 'formSubmit',  // всегда значение 'formSubmit'
+              'formType': form_type,  //варианты: 'mainForm' - для формы на лэнде, 'popupForm' - для обычного попапа http://joxi.ru/V2V5MQLI0xwOGm , 'offerPopupForm' для этого попапа http://joxi.ru/1A5ZwNxtKn9xWr
+            'lastCTA': btnId // id кнопки, по которой отобразился попап http://joxi.ru/V2V5MQLI0xwOGm , если регистрация по другой форме, то '(not set)'
+            });
               console.log(dataLayer);
-              $.ajax({
+/*              $.ajax({
                 type: 'POST',
                 url: 'https://api.telegram.org/bot428402209:AAHl0i9LZX-JboMEM0r6OJEhTglRsI1oFCI/sendMessage?chat_id=346450360&text=У вас новый лид c Innovo LP: ' + 'Имя: ' + name_tl + ' ' + 'Телефон: ' + phone_tl,
-              });
+              });*/
                              //Succes calback
                              setTimeout(function() {
                               document.location.href = thankUrl;
-                            }, 3000);
+                            }, 4500);
                            },
                            //Error callback
                            error: function(xhr, str) {
                             alert('Возникла ошибка: ' + xhr.responseCode);
                           }
                         });
-        } else {
-          $.ajax({
-            type: 'POST',
-            url: 'mail.php',
-            data: msg,
-            success:
             $.ajax({
               type: 'POST',
               url: 'https://app.getresponse.com/add_subscriber.html',
@@ -406,25 +483,19 @@ $(function() {
               statusCode: {0:function() {
                 setTimeout(function(){ $('form').trigger("reset");
                   $("[name=send]").removeAttr("disabled"); }, 1000);
-                                    //Succes calback
-                                    setTimeout(function() {
-                                      $('#sending-message').slideUp('400');
-                                      $('#sending p').remove();
-                                    }, 3000);
-                                    $('.modal').modal('hide');
-                                    $('#thank').modal('show');
-                                    setTimeout(function() {
-                                      $('#thank').modal('hide');
-                                    }, 4000);
-                                  }}
-                                }),
-            //Error callback
-            error:  function(xhr, str) {
-              alert('Возникла ошибка: ' + xhr.responseCode);
-            }
+                //Succes calback
+                setTimeout(function() {
+                  $('#sending-message').slideUp('400');
+                  $('#sending p').remove();
+                }, 3000);
+                $('.modal').modal('hide');
+                $('#thank').modal('show');
+                setTimeout(function() {
+                  $('#thank').modal('hide');
+                }, 4000);
+              }}
+            });
           });
-        }
-      });
     }
     return false;
   })
