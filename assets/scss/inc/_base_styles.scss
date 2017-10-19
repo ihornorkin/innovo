@@ -1,0 +1,88 @@
+/* Hidden modal in load */
+
+.modal {
+	display: block !important;
+	transform: translateY(-200%);
+	transition: .8s;
+}
+
+/* input base styles */
+
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	outline: none;
+	display: inline-block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	outline: none;
+}
+
+button {
+	cursor: pointer;
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* landing inputs */
+
+input {
+	box-sizing: border-box;
+}
+
+.field {
+	position: relative;
+	box-sizing: border-box;
+	display: inline-block;
+	i {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+/* Service global classes */
+
+.relative {
+	position: relative;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.float-right {
+	float: right;
+}
+
+.company-wrapped {
+	width: 100%;
+}
+
+/* Sending */
+
+#sending {
+	border-radius: 5px;
+	border: 4px solid #000;
+	background: #FFF;
+	position: fixed;
+	z-index: 9999;
+	top: 10px;
+	right: 10px;
+	display: none;
+	.sending {
+		padding: 15px;
+	}
+}

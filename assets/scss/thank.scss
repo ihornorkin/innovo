@@ -1,0 +1,144 @@
+@import "inc/mixins";
+@import "inc/variables";
+//@import "inc/base_styles";
+//@import "inc/grid";
+
+.thank-page,
+#thank {
+	height: 100%;
+}
+
+#thank {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background-image: url(../images/thank-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	img {
+
+	}
+	.company-footer {
+		flex: 0 0 auto;
+	}
+	.btn {
+		font-family: $text-bold;
+		letter-spacing: 0.15em;
+		font-size: 12px;
+		text-transform: uppercase;
+		box-shadow: -2.072px 16.873px 40px 0px rgba(121, 108, 108, 0.53);
+		background-color: $main;
+		color: $btn-text;
+		border: none;
+		width: 230px;
+	}
+
+	.btn-callback {
+		border-width: 1px;
+		border-color: $btn-border;
+		border-style: solid;
+		width: 172px;
+		height: 40px;
+		background-color: transparent;
+		color: $main;
+		box-shadow: none !important;
+	}
+	/* Footer */
+
+	.footer {
+		padding: 60px 0 60px 0;
+		.social-network {
+			padding-top: 25px;
+			a {
+				font-size: 22px;
+				color: $main;
+				transition: .4s;
+			}
+		}
+		.btn {
+			display: block;
+			width: 174px;
+			margin-left: auto;
+		}
+	}
+
+}
+
+.thank-main {
+	flex: 1 0 auto;
+	display: flex;
+	align-items: center;
+	.text-container {
+		display: flex;
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			background-color: #b4adad;
+			height: 1px;
+			width: 165px;
+		}
+		&:before {
+			top: 0;
+			left: 0;
+		}
+		&:after {
+			bottom: 55px;
+			right: 0;
+		}
+	}
+	img {
+		width: 142px;
+		margin-bottom: 150px;
+	}
+	h1 {
+		font-family: $title;
+		font-size: 60px;
+		color: $main;
+		margin-bottom: 40px;
+	}
+	.thank-message {
+		font-size: 20px;
+		color: $text-alt;
+		margin-bottom: 78px;
+	}
+	a {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.label-name {
+		font-family: $title;
+		font-size: 12px;
+		letter-spacing: 0.4em;
+		color: $title-cl;
+		margin-top: 150px;
+		margin-bottom: 50px;
+	}
+}
+
+@include tablet-portait {
+	#thank {
+	}
+}
+
+@include phone-only {
+	#thank {
+	}
+	.thank-main {
+		img {
+			margin-top: 20px;
+			margin-bottom: 40px;
+		}
+		.label-name {
+			margin: 40px 0;
+		}
+		.text-container {
+			&:before,
+			&:after {
+				content: none;
+			}
+		}
+	}
+}

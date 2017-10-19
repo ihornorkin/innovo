@@ -1,0 +1,81 @@
+/* ---------------------- Modal window bootstrap -------------------------- */
+
+.modal {
+	text-align: center;
+	display: block !important;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1050;
+	outline: 0;
+	&:after {
+		display: inline-block;
+		vertical-align: middle;
+		width: 0;
+		height: 100%;
+		content: '';
+	}
+}
+
+.fade.in {
+	transform: translateX(0);
+}
+
+.modal-window {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	box-sizing: border-box;
+	border-radius: 6px;
+	box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+	background-clip: padding-box;
+	outline: none;
+		.field {
+		position: relative;
+	}
+	i {
+		position: absolute;
+	}
+	.form_input {
+		display: block;
+		text-align: center;
+	}
+	.close {
+		position: absolute;
+			padding: 0;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	}
+}
+
+.modal-open {
+	overflow: hidden;
+	.modal {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+}
+
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+	background-color: #000;
+}
+
+.modal-backdrop.fade {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.modal-backdrop.in {
+	opacity: .5;
+	filter: alpha(opacity=50);
+}

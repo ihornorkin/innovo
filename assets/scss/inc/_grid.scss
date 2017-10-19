@@ -1,0 +1,453 @@
+@import "mixins";
+@import "variables";
+
+/* ---------------------------------------- Grid system ------------------------------------ */
+
+body {
+  min-width: $descope-width;
+}
+
+.container_12 {
+  margin-left: auto;
+  margin-right: auto;
+  width: $descope-width;
+}
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+  display: inline;
+  float: left;
+  padding-left: $gutter/2;
+  padding-right: $gutter/2;
+  box-sizing: border-box;
+}
+
+.container_12 .grid_1 {
+  width: 8.3333%;
+}
+
+.container_12 .grid_2 {
+  width: 16.6666%;
+}
+
+.container_12 .grid_3 {
+  width: 25%;
+}
+
+.container_12 .grid_4 {
+  width: 33.333%;
+}
+
+.container_12 .grid_5 {
+  width: 41.6666%;
+}
+
+.container_12 .grid_6 {
+  width: 50%;
+}
+
+.container_12 .grid_7 {
+  width: 58.3333%;
+}
+
+.container_12 .grid_8 {
+  width: 66.66%;
+}
+
+.container_12 .grid_9 {
+  width: 75%;
+}
+
+.container_12 .grid_10 {
+  width: 83.333%;
+}
+
+.container_12 .grid_11 {
+  width: 91.66667%;
+}
+
+.container_12 .grid_12 {
+  width: 100%;
+}
+
+.container_12 .prefix_1 {
+  margin-left: 8.3333%;
+}
+
+.container_12 .prefix_2 {
+  margin-left: 16.6666%;
+}
+
+.container_12 .prefix_3 {
+  margin-left: 25%;
+}
+
+.container_12 .prefix_4 {
+  margin-left: 33.333%;
+}
+
+.container_12 .prefix_5 {
+  margin-left: 41.6666%;
+}
+
+.container_12 .prefix_6 {
+  margin-left: 50%;
+}
+
+.container_12 .prefix_7 {
+  margin-left: 58.3333%;
+}
+
+.container_12 .prefix_8 {
+  margin-left: 66.66%;
+}
+
+.container_12 .prefix_9 {
+  margin-left: 75%;
+}
+
+.container_12 .prefix_10 {
+  margin-left: 83.333%;
+}
+
+.container_12 .prefix_11 {
+  margin-left: 91.66667%;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:before,
+.clearfix:after,
+.container_12:before,
+.container_12:after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after,
+.container_12:after {
+  clear: both;
+}
+
+.clearfix,
+.container_12 {
+  zoom: 1;
+}
+
+@include tablet-portait {
+  body {
+    min-width: 760px;
+  }
+
+  .container_12 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 760px;
+  }
+
+  .grid_1,
+  .grid_2,
+  .grid_3,
+  .grid_4,
+  .grid_5,
+  .grid_6,
+  .grid_7,
+  .grid_8,
+  .grid_9,
+  .grid_10,
+  .grid_11,
+  .grid_12 {
+    display: inline;
+    float: left;
+    padding-left: $gutter/2;
+    padding-right: $gutter/2;
+    box-sizing: border-box;
+  }
+
+  .push_1, .pull_1,
+  .push_2, .pull_2,
+  .push_3, .pull_3,
+  .push_4, .pull_4,
+  .push_5, .pull_5,
+  .push_6, .pull_6,
+  .push_7, .pull_7,
+  .push_8, .pull_8,
+  .push_9, .pull_9,
+  .push_10, .pull_10,
+  .push_11, .pull_11 {
+    position: relative;
+  }
+
+  .container_12 .grid_1 {
+    width: 8.3333%;
+  }
+
+  .container_12 .grid_2 {
+    width: 16.6666%;
+  }
+
+  .container_12 .grid_3 {
+    width: 25%;
+  }
+
+  .container_12 .grid_4 {
+    width: 33.333%;
+  }
+
+  .container_12 .grid_5 {
+    width: 41.6666%;
+  }
+
+  .container_12 .grid_6 {
+    width: 50%;
+  }
+
+  .container_12 .grid_7 {
+    width: 58.3333%;
+  }
+
+  .container_12 .grid_8 {
+    width: 66.66%;
+  }
+
+  .container_12 .grid_9 {
+    width: 75%;
+  }
+
+  .container_12 .grid_10 {
+    width: 83.333%;
+  }
+
+  .container_12 .grid_11 {
+    width: 91.66667%;
+  }
+
+  .container_12 .grid_12 {
+    width: 100%;
+  }
+
+  .container_12 .prefix_1 {
+    margin-left: 8.3333%;
+  }
+
+  .container_12 .prefix_2 {
+    margin-left: 16.6666%;
+  }
+
+  .container_12 .prefix_3 {
+    margin-left: 25%;
+  }
+
+  .container_12 .prefix_4 {
+    margin-left: 33.333%;
+  }
+
+  .container_12 .prefix_5 {
+    margin-left: 41.6666%;
+  }
+
+  .container_12 .prefix_6 {
+    margin-left: 50%;
+  }
+
+  .container_12 .prefix_7 {
+    margin-left: 58.3333%;
+  }
+
+  .container_12 .prefix_8 {
+    margin-left: 66.66%;
+  }
+
+  .container_12 .prefix_9 {
+    margin-left: 75%;
+  }
+
+  .container_12 .prefix_10 {
+    margin-left: 83.333%;
+  }
+
+  .container_12 .prefix_11 {
+    margin-left: 91.66667%;
+  }
+
+  .clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  .clearfix:before,
+  .clearfix:after,
+  .container_12:before,
+  .container_12:after {
+    content: '.';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .clearfix:after,
+  .container_12:after {
+    clear: both;
+  }
+
+  .clearfix,
+  .container_12 {
+    zoom: 1;
+  }
+}
+
+@include phone-only {
+
+  body {
+    min-width: 100%;
+  }
+
+  .container_12 {
+    width: 100%;
+  }
+
+  .container_12 .grid_1,
+  .container_12 .grid_2,
+  .container_12 .grid_3,
+  .container_12 .grid_4,
+  .container_12 .grid_5,
+  .container_12 .grid_6,
+  .container_12 .grid_7,
+  .container_12 .grid_8,
+  .container_12 .grid_9,
+  .container_12 .grid_10,
+  .container_12 .grid_11,
+  .container_12 .grid_12 {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+    width: auto;
+    float: none;
+  }
+
+  .container_12 .grid_sx_1 {
+    width: 8.3333%;
+  }
+
+  .container_12 .grid_sx_2 {
+    width: 16.6666%;
+  }
+
+  .container_12 .grid_sx_3 {
+    width: 25%;
+  }
+
+  .container_12 .grid_sx_4 {
+    width: 33.333%;
+  }
+
+  .container_12 .grid_sx_5 {
+    width: 41.6666%;
+  }
+
+  .container_12 .grid_sx_6 {
+    width: 50%;
+  }
+
+  .container_12 .grid_sx_7 {
+    width: 58.3333%;
+  }
+
+  .container_12 .grid_sx_8 {
+    width: 66.66%;
+  }
+
+  .container_12 .grid_sx_9 {
+    width: 75%;
+  }
+
+  .container_12 .grid_sx_10 {
+    width: 83.333%;
+  }
+
+  .container_12 .grid_sx_11 {
+    width: 91.66667%;
+  }
+
+  .container_12 .grid_sx_12 {
+    width: 100%;
+  }
+
+  .container_12 .prefix_1,
+  .container_12 .prefix_2,
+  .container_12 .prefix_3,
+  .container_12 .prefix_4,
+  .container_12 .prefix_5,
+  .container_12 .prefix_6,
+  .container_12 .prefix_7,
+  .container_12 .prefix_8,
+  .container_12 .prefix_9,
+  .container_12 .prefix_10,
+  .container_12 .prefix_11 {
+    margin-left: 0;
+  }
+
+  .clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  .clearfix:before,
+  .clearfix:after,
+  .container_12:before,
+  .container_12:after {
+    content: none;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .clearfix:after,
+  .container_12:after {
+    clear: both;
+  }
+
+  .clearfix,
+  .container_12 {
+    zoom: 1;
+  }
+}

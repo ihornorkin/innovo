@@ -1,0 +1,54 @@
+@import "inc/variables";
+
+html {
+	font-size: $baseline_px;
+}
+
+@mixin rem($property, $px_values) {
+	$baseline_rem: ($baseline_px / 1rem);
+	#{$property}: $px_values;
+	@if type-of($px_values) == 'number' {
+		#{$property}: $px_values / $baseline_rem;
+	}
+
+	@else {
+		$rem_values: ();
+		@each $value in $px_values {
+			@if $value == 0 {
+				$rem_values: append($rem_values, $value);
+			}
+			@else {
+				$rem_values: append($rem_values, ($value / $baseline_rem) );
+			}
+		}
+		#{$property}: $rem_values;
+	}
+
+}
+
+@mixin placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+
+@mixin phone-only {
+	@media (max-width: 767px) { @content; }
+}
+@mixin phone-landscape {
+	@media (max-width: 768px) and (orientation: landscape) { @content; }
+}
+@mixin tablet-portait {
+	@media (min-width: 768px) and (max-width: $descope-width + 20px) { @content; }
+}
+@mixin tablet-landscape {
+	@media (min-width: 900px) and (max-width: 1199px) and (orientation: landscape) { @content; }
+}
+@mixin big-desktop {
+	@media (min-width: 1800px) { @content; }
+}
+@mixin hovers {
+	@media (min-width: 1024px) { @content; }
+}
