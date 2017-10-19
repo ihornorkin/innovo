@@ -69,7 +69,11 @@ input {
 }
 
 .logo-site {
-	width: 119px;
+	width: 98px;
+}
+
+#bingc-active {
+	display: none !important;
 }
 
 .field {
@@ -179,7 +183,7 @@ input {
 }
 
 .navigation {
-	padding: 20px 0;
+	padding: 30px 0 40px 0;
 	.phone-number {
 		color: $nav;
 		font-family: $text-bold;
@@ -220,16 +224,41 @@ header {
 		background-position: 80%;
 	}
 	.call-action {
-		padding-top: 40vh;
+		padding-top: 19vh;
 		@media (min-width: 1060px) and (max-width: 1400px) {
 			padding-top: 25vh;
 		}
 	}
 	.btn {
-		margin-top: 42px;
+		margin-top: 34px;
+		margin-left: 100px;
 	}
 	.scroll-down {
-		margin: 75px 0 40px 0;
+		//margin: 75px 0 40px 0;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -40px;
+	}
+	.text-bottom {
+		color: #796c6c;
+		font-size: 20px;
+		line-height: 26px;
+		position: relative;
+		margin-top: 58px;
+		padding-left: 98px;
+		padding-right: 180px;
+		text-transform: none;
+		font-family: $text;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 12px;
+			left: 0;
+			background-color: #796C6C;
+			height: 1px;
+			width: 68px;
+		}
 	}
 }
 
@@ -259,7 +288,7 @@ header {
 		top: 50%;
 		transform: translateY(-50%);
 		background-color: $title-cl;
-		width: 263px;
+		width: 132px;
 		height: 1px;
 		left: 100%;
 	}

@@ -94,8 +94,8 @@ p {
 		h3 {
 			font-size: 48px;
 			line-height: 48px;
-			margin-top: 48px;
-			margin-bottom: 30px;
+			margin-top: 105px;
+			margin-bottom: 28px;
 		}
 	}
 	p {
@@ -124,37 +124,59 @@ p {
 		margin-top: 75px;
 		h3 {
 			font-family: $text-bold;
-			margin-bottom: 25px;
+			margin-bottom: 20px;
+			margin-top: 40px;
 		}
 		p {
-			margin-bottom: 32px;
+			margin-bottom: 10px;
 		}
 	}
 }
 
 .technologic {
-	padding: 176px 0 100px 0;
+	padding: 204px 0 100px 0;
 	h3 {
-		font-size: 48px;
-		line-height: 48px;
+		text-align: left;
 	}
-	.gallery {
-		display: flex;
-		justify-content: space-between;
-	}
-	.desk-list {
-		display: flex;
-		margin-top: 75px;
-		li {
-			flex-basis: 33.3333%;
-			padding-right: 25px;
+	.big-title {
+		&:after {
+			right: 70px;
 		}
 	}
-	p {
+	.title-desk {
 		font-size: 20px;
 		line-height: 26px;
-		color: $text-alt;
-		text-align: justify;
+		font-family: $text-bold;
+		color: #796c6c;
+		margin-top: 58px;
+	}
+	.item {
+		position: relative;
+		padding-left: 40px;
+	}
+	.number {
+		position: absolute;
+		right: -12px;
+		top: 114px;
+		font-size: 36px;
+		font-family: $title;
+		color: $title-cl;
+		transform: rotate(90deg);
+	}
+	.technologic-content {
+		padding-left: 20px;
+		margin-bottom: 45px;
+		h4 {
+			font-size: 20px;
+			line-height: 20px;
+			margin: 15px 0 8px 0;
+			padding-right: 30px;
+		}
+		p {
+			color: $title-cl;
+			font-size: 20px;
+			line-height: 24px;
+		}
 	}
 }
 
@@ -270,11 +292,16 @@ p {
 }
 
 .feedback {
+	padding-top: 48px;
 	padding-bottom: 70px;
 	.big-title {
-		margin-top: 72px;
+		margin-top: 54px;
 		margin-left: 52px;
 		margin-right: 52px;
+		strong {
+			display: block;
+			color: $title-cl;
+		}
 	}
 }
 
@@ -399,7 +426,8 @@ p {
 		h3 {
 			font-size: 48px;
 			line-height: 48px;
-			margin-bottom: 30px;
+			padding-top: 10px;
+			margin-bottom: 20px;
 		}
 		p {
 			font-size: 20px;
@@ -414,11 +442,11 @@ p {
 		}
 	}
 	.fear-wrapped {
-		padding-top: 60px;
+		padding-top: 128px;
 		h3 {
 			font-size: 30px;
-			line-height: 26px;
-			margin-bottom: 12px;
+			line-height: 34px;
+			margin-bottom: 18px;
 			font-family: $text-bold;
 		}
 		p {
@@ -428,58 +456,124 @@ p {
 		}
 		.btn {
 			margin-top: 32px;
+			width: 320px;
+		}
+	}
+	.fear-image {
+		margin-top: 70px;
+	}
+	.doctors-content {
+		h3 {
+			font-size: 30px;
+			line-height: 26px;
+			font-family: $text-bold;
+			margin-top: 35px;
+			margin-bottom: 15px;
+		}
+		p {
+			margin-bottom: 35px;
+			font-size: 20px;
+			line-height: 26px;
+			color: $nav;
+			strong {
+				color: $nav;
+			}
 		}
 	}
 }
 
 .process {
-	padding: 100px 0 196px 0;
+	padding: 102px 0 122px 0;
 	background-image: url(../images/process.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50%;
+	.title {
+		margin-bottom: 52px;
+	}
+	.title-desk {
+		text-align: center;
+		line-height: 26px;
+		font-size: 20px;
+		color: $title-cl;
+		font-family: $text-bold;
+		position: relative;
+		padding-top: 35px;
+		padding-bottom: 35px;
+		margin-top: 54px;
+		margin-bottom: 95px;
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 85px;
+			height: 1px;
+			background-color: $title-cl;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 85px;
+			height: 1px;
+			background-color: $title-cl;
+		}
+	}
 	.big-title {
-		margin: 40px 68px 0 68px;
-		text-align: left;
+		margin: 0 30px 20px 30px;
+		padding: 0;
+		&:before {
+			content: none;
+		}
+		&:after {
+			content: none;
+		}
 	}
 	.item {
-		margin-left: 30px;
-		padding: 35px 35px 40px 40px;
-		background-color: $item;
 		position: relative;
+		padding-left: 68px;
 		h3 {
 			font-family: $text-bold;
 			font-size: 24px;
 			line-height: 26px;
-			margin-bottom: 15px;
+			margin-bottom: 12px;
 		}
 		p {
 			font-size: 20px;
 			line-height: 26px;
 			color: $text-alt;
+			padding-right: 20px;
 		}
 		.number {
 			position: absolute;
 			font-family: $title;
-			font-size: 14px;
-			top: 4px;
-			left: -40px;
+			font-size: 36px;
+			top: 18px;
+			left: -35px;
 			transform: rotate(-90deg);
 			color: $nav;
 		}
 	}
-	.item {
-		height: 214px;
+	.item-tooth {
+		margin: 100px 0 5px 0;
+		img {
+			position: relative;
+			left: -60px;
+		}
 	}
-	.item-min {
-		height: 190px;
+	.item-image {
+		margin: 35px 0 75px 0;
 	}
-	.clear {
-		margin-bottom: 55px;
+	.item-last {
+		margin-top: 68px;
 	}
 }
 
-.garanty {
+/* .garanty {
 	.section-image {
 		position: absolute;
 		right: 110px;
@@ -506,13 +600,13 @@ p {
 			opacity: 0.42;
 		}
 	}
-}
+} */
 
 .form-title {
 	transition: .4s;
 }
 
-.result {
+/* .result {
 	padding: 145px 0 145px 0;
 	background-image: url(../images/result.jpg);
 	background-size: cover;
@@ -607,7 +701,7 @@ p {
 	.slick-dots {
 		right: -45px;
 	}
-}
+} */
 
 .slick-slide {
 	outline: none;
@@ -620,15 +714,26 @@ p {
 	background-position: 50%;
 	position: relative;
 	overflow: hidden;
-	padding: 55px 0 170px 0;
+	padding: 100px 0 158px 0;
 	h3 {
 		margin: 0 135px;
 	}
 	.big-title {
 		margin-top: 110px;
+		margin-left: 130px;
+		margin-right: 130px;
+		margin-bottom: 180px;
 	}
 	.section-image {
 		margin-bottom: 60px;
+		min-height: 1px;
+		img {
+			position: absolute;
+			right: 0;
+		}
+	}
+	.team-doctors {
+		text-align: right;
 	}
 	h4 {
 		margin-top: 65px;
@@ -639,6 +744,12 @@ p {
 		font-size: 20px;
 		line-height: 26px;
 		color: $text-alt;
+	}
+	.name,
+	.position,
+	.bio,
+	ul {
+		padding-left: 30px;
 	}
 	ul {
 		margin: 20px 0;
@@ -656,9 +767,8 @@ p {
 		z-index: 10;
 		color: $nav;
 		bottom: auto !important;
+		right: 18px;
 		top: -5px;
-		left: 18px;
-		right: auto;
 		transition: .4s;
 		&:before {
 			content: "";
@@ -673,23 +783,20 @@ p {
 	}
 	.slick-next {
 		top: auto;
-		right: auto;
-		left: 15px;
 		bottom: -15px;
 		z-index: 99;
+		right: 14px;
 	}
 	.slick-prev {
 		top: auto;
-		right: auto;
-		left: 15px;
 		bottom: -64px;
 		z-index: 99;
+		right: 14px;
 	}
 	.slick-dots {
-		right: auto;
 		bottom: auto;
-		left: 15px;
 		top: 125px;
+		right: 18px;
 	}
 	.container_12 {
 		.slider-wrapped {
@@ -704,8 +811,9 @@ p {
 		font-family: $title;
 		font-size: 14px;
 		position: absolute;
-		right: 0;
-		top: 6px;
+		left: 455px;
+		top: 12px;
+		z-index: 90;
 		transform: rotate(-90deg);
 	}
 }
@@ -863,33 +971,83 @@ p {
 		top: 170px;
 		z-index: 80;
 	}
+	.new-price {
+		background-color: transparent;
+		border: none;
+		font-family: $text-bold;
+		text-transform: uppercase;
+		padding-bottom: 5px;
+		padding: 0 0 5px 0;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			background-color: #7A6C6C;
+			bottom: 0;
+		}
+	}
+}
+
+.trust {
+	padding: 190px 0 0 0;
+	.title {
+		font-size: 48px;
+		letter-spacing: 0;
+		color: #000000;
+		text-transform: none;
+		padding-bottom: 35px;
+		margin-bottom: 85px;
+		&:before {
+			content: "";
+			width: 84px;
+		}
+	}
+	.logo-wrraper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		li {
+			width: 20%;
+			text-align: center;
+			margin-bottom: 60px;
+		}
+		img {
+			display: inline-block;
+		}
+	}
 }
 
 .phil {
-	padding: 195px 0 180px 0;
+	padding: 140px 0 180px 0;
 	background-image: url(../images/phil-bg.jpg);
 	background-position: 50%;
 	background-size: cover;
 	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
 	.image-wrapped {
 		position: relative;
 		min-height: 1px;
 		img {
 			position: absolute;
-			right: 0;
+			left: 0;
 		}
 	}
 	h3 {
 		margin-bottom: 20px;
-		margin-top: 85px;
+		margin-top: 42px;
 		font-size: 48px;
 		line-height: 48px;
 		font-family: $title;
+		text-align: center;
 	}
 	p {
 		font-size: 20px;
 		line-height: 26px;
 		color: $text-alt;
+		text-align: center;
 	}
 	strong {
 		margin-top: 15px;
@@ -906,10 +1064,17 @@ p {
 		color: $nav;
 		font-size: 20px;
 		line-height: 26px;
-		margin: 70px 0 15px 0;
+		margin: 110px 0 15px 0;
 		font-family: $text-bold;
 		a {
 			color: $main;
+		}
+	}
+	.text-bottom {
+		text-align: left;
+		p {
+			text-align: left;
+			margin-bottom: 32px;
 		}
 	}
 	form {
@@ -1010,6 +1175,9 @@ p {
 			color: $main;
 			transition: .4s;
 		}
+	}
+	.logo-site {
+		width: 120px;
 	}
 	.btn {
 		display: block;
