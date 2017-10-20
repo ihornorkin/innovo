@@ -543,7 +543,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <p class="price-name">Виниры —</p>
                     <p class="text">Тонкие накладки толщиной в 0.2 мм, которые фиксируются на внешнюю поверхность передних зубов. Процедура не требует агрессивной препаровки зубов, а в некоторых случаях можно обойтись совсем без нее. С помощью виниров можно творить настоящие чудеса: изменить жизнь пациента к лучшему, повысить самооценку, добавить уверенности в себе. Виниры выполняют эстетическую, восстановительную, фонетическую, маскирующую функцию, а в некоторых случаях могут придавать и омолаживающий эффект.</p>
                     <!-- <p class="price-volume">500 €<span>\единица</span></p> -->
-                    <button class="price-volume new-price">Узнать цену</button>
+                    <button class="price-volume new-price" data-toggle="modal" data-target="#what-price">Узнать цену</button>
                     <p class="price-name-big">Керамические<br /> виниры</p>
                   </div>
                   <div class="grid_5 prefix_1">
@@ -556,7 +556,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div class="grid_5">
                     <p class="price-name">Коронка —</p>
                     <p class="text">Цельнокерамическая коронка — одно из наиболее эстетичных решений среди непрямых реставраций. Такие коронки безвредны: они не влияют на работу желудочно-кишечного тракта, не вызывают аллергических реакций или патологических изменений слизистой оболочки полости рта. Цельнокерамические коронки долговечны, на них зачастую дают пожизненную гарантию. А самое приятное — внешне такие коронки неотличимы от натуральных зубов, они преломляют свет подобно натуральной эмали, а современные технологии позволяют подобрать цвет точно под оттенок родных зубов. В нашей клинике коронки изготавливают по новейшей технологии CAD/CAM CEREC (Chairside Economical Restorations of Esthetic Ceramic). Благодаря этой системе мы совершаем подобные реставрации за один визит. Процесс фиксации керамических коронок происходит очень быстро и комфортно, а благодаря легкости материала привыкание к новым коронкам происходит очень быстро.</p>
-                    <button class="price-volume new-price">Узнать цену</button>
+                    <button class="price-volume new-price" data-toggle="modal" data-target="#what-price">Узнать цену</button>
                     <!-- <p class="price-volume">400 €<span>\единица</span></p> -->
                     <p class="price-name-big">Цельнокерамическая<br /> коронка</p>
                   </div>
@@ -570,7 +570,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div class="grid_5">
                     <p class="price-name">Вкладка —</p>
                     <p class="text">Керамические вкладки — более современная и прочная альтернатива фотополимерным пломбам. Вкладки моделирует зубной техник в лаборатории, используя специальное ПО. Керамические вкладки изготавливают в строгом соответствии с анатомией зуба. Благодаря этому, после фиксации в полости рта вкладки сливаются с тканями зуба и их практически невозможно отличить от здоровых тканей зуба. </p>
-                    <button class="price-volume new-price">Узнать цену</button>
+                    <button class="price-volume new-price" data-toggle="modal" data-target="#what-price">Узнать цену</button>
                     <!-- <p class="price-volume">350 €<span>\единица</span></p> -->
                     <p class="price-name-big">Керамическая<br /> вкладка</p>
                   </div>
@@ -776,6 +776,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- GET RESPONCE INPUTS -->
         <div class="text-center">
           <button type="submit" class="btn btn-block" name="send">Записаться на прием</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade" id="what-price" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-window">
+      <div class="modal-content">
+        <p class="modal-title">Узнать цену</p>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <form method="POST" class="form-inline" action="javascript:void(null);" data-lead="registration" data-form="popup">
+          <!-- Hidden Required Fields -->
+          <input type="hidden" name="project_name" value="innovoway.com">
+          <input type="hidden" name="admin_email" value="info@innovoclinic.com">
+          <input type="hidden" name="form_subject" value="Запись на прием">
+          <!-- END Hidden Required Fields -->
+          <div class="form_input">
+            <p class="form-title">Ваше имя</p>
+            <span class="field">
+             <input type="text" class="form-control" name="name" required=""  placeholder="Как вас зовут?" />
+           </span>
+         </div>
+         <div class="form_input">
+           <p class="form-title">телефон</p>
+           <span class="field">
+            <input type="tel" class="form-control" name="phone" required="" placeholder="Ваш номер телефона" />
+          </span>
+        </div>
+        <!-- GET RESPONCE INPUTS -->
+        <input type="hidden" name="start_day" value="0"/>
+        <!-- Если нужно отправлять и на почту и на GetResponse - указываем campaign_token -->
+        <input type="hidden" name="campaign_token" value=""/>
+        <!-- GET RESPONCE INPUTS -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-block" name="send">Узнать цену</button>
         </div>
       </form>
     </div>
