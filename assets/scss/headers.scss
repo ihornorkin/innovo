@@ -234,7 +234,6 @@ header {
 		margin-left: 100px;
 	}
 	.scroll-down {
-		//margin: 75px 0 40px 0;
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
@@ -322,7 +321,17 @@ header {
 	header {
 		height: auto;
 		.call-action {
-			padding-top: 180px;
+			padding-top: 100px;
+		}
+		.text-bottom {
+			padding-right: 0;
+			margin-top: 14px;
+			br {
+				display: none;
+			}
+		}
+		.btn {
+			margin-bottom: 60px;
 		}
 	}
 }

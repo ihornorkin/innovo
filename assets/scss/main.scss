@@ -17,7 +17,7 @@
 /* Hidden in desctop */
 
 .hidden-mobile {
-	display: none !important;
+	display: block !important;
 }
 
 .vissible-mobile {
@@ -153,6 +153,7 @@ p {
 	.item {
 		position: relative;
 		padding-left: 40px;
+		height: 261px;
 	}
 	.number {
 		position: absolute;

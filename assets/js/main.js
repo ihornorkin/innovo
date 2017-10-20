@@ -126,8 +126,10 @@ $('#price-slider').on('init reInit afterChange', function (event, slick, current
   }, 400);
 });
 
+var height = 0;
+
 $('.slick-dots').each(function(index, elem) {
-  var height = $(elem).height() + 80;
+  height = $(elem).height() + 150;
   $(elem).parent().parent().find('.current-position').css('bottom', height + 'px');
 });
 
