@@ -14,6 +14,10 @@
 		display: none;
 	}
 
+	.visible-medium {
+		display: block !important;
+	}
+
 	.smile {
 		padding: 100px 0 40px 0;
 		.container_12 {
@@ -207,81 +211,10 @@
 		.item-last {
 			margin-top: 0;
 		}
-	}
-
-/* 	.garanty {
-	.section-image {
-		display: none;
-	}
-	h3 {
-		margin-bottom: 60px;
-	}
-	h4 {
-		text-align: center;
-	}
-	.garanty-title {
-		text-align: center;
-	}
-	.grid_6 {
-		width: 100%;
-	}
-	h4 {
-		font-size: 18px;
-		line-height: 22px;
-	}
-	.garanty-desk {
-		p {
-			font-size: 16px;
-			line-height: 22px;
-			padding-right: 2px;
-			br {
-				display: none;
-			}
+		.item-only-desctope {
+			display: block;
 		}
 	}
-} */
-
-/* #garanty-slider {
-	height: 315px;
-	overflow: hidden;
-} */
-
-/* 	.result {
-	padding: 40px 0;
-	.grid_4,
-	.grid_5 {
-		margin-left: 0;
-		width: 50%;
-	}
-	h3 {
-		margin-top: 0;
-		padding-right: 0;
-		padding-left: 0;
-		font-size: 34px;
-		line-height: 36px;
-	}
-	h4 {
-		margin-top: 40px;
-	}
-	p {
-		padding-left: 0;
-	}
-	.prefix_1 {
-		margin-left: 0;
-		p {
-			padding-left: 0;
-		}
-	}
-	.slick-dots {
-		display: none !important;
-	}
-	.current-position,
-	.slick-dots,
-	.current-position-big,
-	.slider-title {
-		display: none;
-	}
-} */
 
 .team {
 	padding: 80px 0;
@@ -328,6 +261,20 @@
 			top: 120px;
 		}
 	}
+	.current-position-small {
+		left: 0;
+	}
+}
+
+.trust {
+	padding-top: 40px;
+	.logo-wrraper {
+		flex-wrap: wrap;
+		li {
+			width: auto;
+			flex-grow: 1;
+		}
+	}
 }
 
 #team-slider {
@@ -363,8 +310,11 @@
 	img {
 		max-width: inherit;
 		width: 120%;
-		top: 60px;
+		top: 0;
 		left: -75px;
+	}
+	.prefix_2 {
+		margin-left: 0;
 	}
 }
 
@@ -469,7 +419,7 @@ img {
 	}
 
 	.smile {
-		padding: 40px 0;
+		padding: 40px 0 0 0;
 		p {
 			font-size: 16px;
 			line-height: 20px;
@@ -484,6 +434,7 @@ img {
 		}
 		.image-wrapped {
 			text-align: center;
+			margin-bottom: 0;
 			img {
 				width: 70%;
 			}
@@ -523,6 +474,14 @@ img {
 					text-align: center;
 				}
 			}
+		}
+		.title-desk {
+			margin-top: 15px;
+			margin-bottom: 15px;
+			text-align: center;
+		}
+		.number {
+			display: none;
 		}
 	}
 
@@ -645,6 +604,9 @@ img {
 		.clear {
 			display: none;
 		}
+		.title-desk {
+			margin-bottom: 70px;
+		}
 		.item {
 			h3 {
 				font-size: 20px;
@@ -658,78 +620,13 @@ img {
 				top: 10px;
 			}
 		}
-	}
-
-/* 	.garanty {
-	h3 {
-		font-size: 30px;
-		line-height: 30px;
-	}
-	img {
-		display: none;
-	}
-	.garanty-desk {
-		li {
-			flex-basis: 100%;
+		.item-only-mobile {
+			display: block;
 		}
-		p {
-			font-size: 16px;
+		.item-only-desctope {
+			display: none;
 		}
 	}
-	h4 {
-		text-align: center;
-		font-size: 20px;
-	}
-} */
-
-/* 	.result {
-	padding: 40px 0;
-	position: relative;
-	p {
-		font-size: 16px;
-		line-height: 22px;
-	}
-	h3 {
-		font-size: 30px;
-		line-height: 30px;
-		text-align: center;
-		margin-top: 15px;
-		padding: 0;
-		position: absolute;
-		top: 100px;
-	}
-	.slider-wrapped {
-		margin-top: 120px;
-	}
-	.current-position-big {
-		right: -15px;
-		top: 10px;
-		display: none;
-	}
-	.slider-title {
-		display: none;
-	}
-	.slick-dots {
-		right: 0;
-	}
-	.current-position {
-		right: 0;
-	}
-	h4 {
-		margin: 40px 0 20px 0;
-		text-align: center;
-		font-size: 20px;
-		line-height: 22px;
-	}
-	form {
-		padding: 20px;
-		max-width: 320px;
-		margin: 10px auto;
-	}
-	img {
-		margin: 0 auto;
-	}
-} */
 
 #garanty-slider {
 	.slide {
@@ -782,13 +679,16 @@ img {
 	.slick-dots {
 		display: none !important;
 	}
-	.slick-next {
-		bottom: -15px;
+		.slick-prev {
+			bottom: -15px;
+		left: auto;
+		right: 50px;
 		transform: rotate(-90deg);
 	}
-	.slick-prev {
+	.slick-next {
 		bottom: -15px;
-		left: 60px;
+		right: auto;
+		left: 50px;
 		transform: rotate(-90deg);
 	}
 	.slider-wrapped {
@@ -832,7 +732,7 @@ img {
 	}
 	.price-volume {
 		top: auto;
-		bottom: 0;
+		bottom: 6px;
 		right: auto;
 		left: 20px;
 	}
@@ -866,6 +766,17 @@ img {
 	}
 }
 
+.trust {
+	padding-top: 40px;
+	.logo-wrraper {
+		flex-wrap: wrap;
+		li {
+			padding: 0 15px;
+			width: auto;
+		}
+	}
+}
+
 .phil {
 	padding: 40px 0;
 	position: relative;
@@ -880,7 +791,8 @@ img {
 	.write {
 		margin: 0;
 		position: absolute;
-		bottom: 400px;
+		bottom: 740px;
+		padding: 0 15px;
 	}
 	h3 {
 		margin-top: 15px;
@@ -1128,6 +1040,18 @@ img {
 		&:hover,
 		&:active {
 			color: #FFF;
+		}
+	}
+	.price {
+		.new-price {
+			transition: 0.4s;
+			&:hover,
+			&:active {
+				color: $line;
+				&:before {
+					background-color: $line;
+				}
+			}
 		}
 	}
 	.map {

@@ -49,9 +49,10 @@ $('#team-slider').slick({
   slidesToShow: 1,
   responsive: [
   {
-    breakpoint: 768,
+    breakpoint: 769,
     settings: {
-      adaptiveHeight: true
+      adaptiveHeight: true,
+      dots: false
     }
   }
   ]
@@ -221,7 +222,7 @@ if (!document.getElementsByClassName) {
         });
 
 $(window).resize(function(e) {
-if ($(window).width() < 768) {
+if ($(window).width() < 767) {
         $('.burger-menu').on('click', function(event) {
           $(this).toggleClass('menu-on');
           $('.navigation').toggleClass('navigation-open');
@@ -236,7 +237,7 @@ if ($(window).width() < 768) {
 }
 });
 
-if ($(window).width() < 768) {
+if ($(window).width() < 767) {
         $('.burger-menu').on('click', function(event) {
           $(this).toggleClass('menu-on');
           $('.navigation').toggleClass('navigation-open');

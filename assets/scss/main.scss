@@ -559,6 +559,12 @@ p {
 			color: $nav;
 		}
 	}
+	.item-only-mobile {
+		display: none;
+	}
+	.item-only-desctope {
+		display: block;
+	}
 	.item-tooth {
 		margin: 100px 0 5px 0;
 		img {
@@ -574,135 +580,9 @@ p {
 	}
 }
 
-/* .garanty {
-	.section-image {
-		position: absolute;
-		right: 110px;
-		top: 145px;
-	}
-	h3 {
-		font-family: $title;
-		font-size: 48px;
-		line-height: 48px;
-		margin-bottom: 25px;
-	}
-	.garanty-desk {
-		ul {
-			display: flex;
-			flex-wrap: wrap;
-		}
-		li {
-			flex-basis: 50%;
-			margin-bottom: 45px;
-		}
-		p {
-			font-size: 20px;
-			line-height: 26px;
-			opacity: 0.42;
-		}
-	}
-} */
-
 .form-title {
 	transition: .4s;
 }
-
-/* .result {
-	padding: 145px 0 145px 0;
-	background-image: url(../images/result.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50%;
-	h3 {
-		font-size: 48px;
-		line-height: 48px;
-		margin-bottom: 30px;
-		margin-top: 70px;
-		padding-right: 15px;
-	}
-	p {
-		font-size: 20px;
-		line-height: 26px;
-		color: $text-alt;
-		a {
-			color: $main;
-		}
-	}
-	strong {
-		display: inline-block;
-	}
-	h4 {
-		font-family: $text-bold;
-		font-size: 30px;
-		line-height: 34px;
-		margin-top: 110px;
-		margin-bottom: 28px;
-	}
-	form {
-		margin-top: 35px;
-		padding: 55px 70px 70px 70px;
-		background-color: $item;
-	}
-	.form-title {
-		font-family: $title;
-		font-size: 9px;
-		letter-spacing: 0.5em;
-		margin-bottom: 5px;
-		text-transform: uppercase;
-		color: $input;
-	}
-	input {
-		margin-bottom: 28px;
-	}
-	.btn {
-		margin-top: 20px;
-		width: 230px;
-	}
-	.slider-title {
-		font-size: 8px;
-		letter-spacing: 0.5em;
-		font-family: $title;
-		position: absolute;
-		right: -95px;
-		top: 48px;
-		text-transform: uppercase;
-		transform: rotate(90deg);
-		color: $slider-number;
-		letter-spacing: 0.5em;
-	}
-	.current-position {
-		font-family: $title;
-		font-size: 12px;
-		letter-spacing: 0.05em;
-		position: absolute;
-		z-index: 10;
-		color: $nav;
-		right: -45px;
-		transition: .4s;
-		&:before {
-			content: "";
-			position: absolute;
-			left: 50%;
-			top: 30px;
-			transform: translateX(-50%);
-			width: 1px;
-			height: 73px;
-			background-color: $nav;
-		}
-	}
-	.current-position-big {
-		position: absolute;
-		font-family: $title;
-		font-size: 48px;
-		transform: rotate(-90deg);
-		top: 98px;
-		right: -50px;
-		color: $nav;
-	}
-	.slick-dots {
-		right: -45px;
-	}
-} */
 
 .slick-slide {
 	outline: none;
