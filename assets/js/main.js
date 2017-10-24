@@ -12,6 +12,22 @@ $(window).scroll(function() {
 
   });
 
+$(document).on('load', function() {
+  if ($(window).scrollTop() > 50) {
+        $('.navigation').addClass('navigation-fixed');
+    } else {
+        $('.navigation').removeClass('navigation-fixed');
+    }
+});
+
+$(window).on('scroll', function () {
+    if ($(window).scrollTop() > 50) {
+        $('.navigation').addClass('navigation-fixed');
+    } else {
+        $('.navigation').removeClass('navigation-fixed');
+    }
+});
+
 /* Smooth scroll on link */
 $("body").on("click",".custome-link", function (event) {
   event.preventDefault();
@@ -76,6 +92,13 @@ $('#price-slider').slick({
   fade: true,
   adaptiveHeight: true
 });
+
+$('#technik-slider').slick({
+  dots: false,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: false
+})
 
 var sliderNumbers = '#feedback-slider .slick-dots button, #garanty-slider .slick-dots button, #team-slider .slick-dots button, #price-slider .slick-dots button';
 

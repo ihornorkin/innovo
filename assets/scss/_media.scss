@@ -214,6 +214,21 @@
 		.item-only-desctope {
 			display: block;
 		}
+		.item-tablet {
+			display: flex !important;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.item {
+			width: 40%;
+			height: auto;
+			margin-bottom: 40px;
+			p,
+			h3 {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
 	}
 
 .team {
@@ -386,13 +401,14 @@ img {
 		display: none !important;
 	}
 
+	.visible-medium {
+		display: none !important;
+	}
+
 	.vissible-mobile {
 		display: block !important;
 	}
 
-	.visible-medium {
-		display: none !important;
-	}
 	/* Sending */
 
 	#sending {
@@ -416,36 +432,6 @@ img {
 
 	.title {
 		margin-bottom: 30px;
-	}
-
-	.smile {
-		padding: 40px 0 0 0;
-		p {
-			font-size: 16px;
-			line-height: 20px;
-			margin-bottom: 15px;
-		}
-		.perfect-smile {
-			h3 {
-				font-size: 30px;
-				line-height: 34px;
-				margin-top: 0;
-			}
-		}
-		.image-wrapped {
-			text-align: center;
-			margin-bottom: 0;
-			img {
-				width: 70%;
-			}
-		}
-		.cabinet-wrapped {
-			display: none;
-		}
-		.cabinet-desk {
-			margin-top: 10px;
-			text-align: center;
-		}
 	}
 
 	.technologic {
@@ -482,6 +468,28 @@ img {
 		}
 		.number {
 			display: none;
+		}
+		.item {
+			padding-left: 0;
+			height: auto;
+			margin-bottom: 40px;
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+		.technologic-content {
+			padding-left: 0;
+			h4 {
+				padding-right: 0;
+			}
+			h4,
+			p {
+				text-align: center;
+			}
+		}
+		#technik-slider {
+			padding-top: 20px;
 		}
 	}
 
@@ -530,6 +538,7 @@ img {
 			margin-bottom: 15px;
 			font-size: 16px;
 			line-height: 22px;
+			color: #000;
 		}
 		.slick-dots {
 			display: none !important;
@@ -582,7 +591,8 @@ img {
 			text-align: center;
 		}
 		img {
-			margin: 0 auto;
+			display: block;
+			margin: 20px auto;
 		}
 		.fear-image {
 			display: none;
@@ -594,12 +604,13 @@ img {
 
 	.process {
 		padding: 40px 0;
-		.big-title {
-			margin: 60px 68px;
-		}
 		.item {
 			height: auto;
 			margin-bottom: 20px;
+					.big-title {
+			margin: 40px 0;
+			padding: 0;
+		}
 		}
 		.clear {
 			display: none;
@@ -608,17 +619,28 @@ img {
 			margin-bottom: 70px;
 		}
 		.item {
+			padding-left: 0;
+			margin-bottom: 40px;
 			h3 {
 				font-size: 20px;
 				line-height: 22px;
+				padding-right: 20px;
+				padding-left: 45px;
 			}
 			p {
 				font-size: 16px;
 				line-height: 22px;
+				padding-right: 20px;
+				padding-left: 45px;
 			}
 			.number {
 				top: 10px;
+				left: -15px;
+				padding: 0;
 			}
+		}
+		.item-last {
+			margin-top: 0;
 		}
 		.item-only-mobile {
 			display: block;
@@ -704,11 +726,17 @@ img {
 			transform: translateX(-50%);
 		}
 	}
+	.team-doctors {
+		margin-top: 20px;
+	}
 }
 
 #team-slider {
 	.position {
 		margin-bottom: 290px;
+	}
+	.position {
+		padding-left: 60px;
 	}
 }
 
@@ -767,14 +795,7 @@ img {
 }
 
 .trust {
-	padding-top: 40px;
-	.logo-wrraper {
-		flex-wrap: wrap;
-		li {
-			padding: 0 15px;
-			width: auto;
-		}
-	}
+display: none;
 }
 
 .phil {
@@ -790,9 +811,7 @@ img {
 	}
 	.write {
 		margin: 0;
-		position: absolute;
-		bottom: 740px;
-		padding: 0 15px;
+		padding: 20px 0;
 	}
 	h3 {
 		margin-top: 15px;
@@ -809,7 +828,7 @@ img {
 	form {
 		padding: 20px;
 		max-width: 320px;
-		margin: 115px auto 20px auto;
+		margin: 10px auto 20px auto;
 	}
 }
 
@@ -951,6 +970,7 @@ img {
 	header {
 		.scroll-down {
 			transition: .4s;
+			display: none;
 			&:hover {
 				transform: translateY(12px);
 			}

@@ -28,113 +28,13 @@
 	display: none !important;
 }
 
-p {
-	strong {
-		font-family: $text-bold;
-		color: $allert;
-	}
-}
-
-.title {
-	font-family: $title;
-	font-size: 11px;
-	letter-spacing: 0.5em;
-	text-transform: uppercase;
-	padding-bottom: 40px;
-	position: relative;
-	color: $title-cl;
-	margin-bottom: 60px;
-	&:before {
-		content: "";
-		position: absolute;
-		background-color: $title-cl;
-		width: 28px;
-		height: 1px;
-		left: 50%;
-		bottom: 0;
-		transform: translateX(-50%);
-	}
-}
-
-.big-title {
-	text-align: center;
-	font-family: $title;
-	font-size: 48px;
-	line-height: 48px;
-	position: relative;
-	padding: 32px 0;
-	&:before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		background-color: $line;
-		width: 83px;
-		height: 1px;
-	}
-	&:after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		background-color: $line;
-		width: 83px;
-		height: 1px;
-	}
-}
-
-.smile {
-	padding: 200px 0 100px 0;
-	background-image: url(../images/perfect-smile-bg.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 50%;
-	.perfect-smile {
-		text-align: center;
-		h3 {
-			font-size: 48px;
-			line-height: 48px;
-			margin-top: 105px;
-			margin-bottom: 28px;
-		}
-	}
-	p {
-		color: $text-alt;
-		font-size: 20px;
-		line-height: 26px;
-		margin-bottom: 18px;
-	}
-	.image-wrapped {
-		text-align: right;
-		margin-bottom: 60px;
-	}
-	.cabinet-wrapped {
-		min-height: 1px;
-		img {
-			position: absolute;
-			right: 0;
-		}
-	}
-	h3 {
-		font-size: 30px;
-		line-height: 26px;
-		margin-bottom: 20px;
-	}
-	.cabinet-desk {
-		margin-top: 75px;
-		h3 {
-			font-family: $text-bold;
-			margin-bottom: 20px;
-			margin-top: 40px;
-		}
-		p {
-			margin-bottom: 10px;
-		}
-	}
-}
-
 .technologic {
 	padding: 204px 0 100px 0;
+	.visible-medium {
+			@media (min-width: $descope-width + 20px) {
+		display: block !important;
+	}
+	}
 	h3 {
 		text-align: left;
 	}
@@ -154,6 +54,7 @@ p {
 		position: relative;
 		padding-left: 40px;
 		height: 261px;
+		margin-bottom: 45px;
 	}
 	.number {
 		position: absolute;
@@ -166,7 +67,6 @@ p {
 	}
 	.technologic-content {
 		padding-left: 20px;
-		margin-bottom: 45px;
 		h4 {
 			font-size: 20px;
 			line-height: 20px;

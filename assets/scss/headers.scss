@@ -1,7 +1,6 @@
 @import "inc/mixins";
 @import "inc/variables";
-@import "inc/base_styles";
-@import "inc/grid";
+
 /* ------------------------------------- Headers styles ------------------------------- */
 
 /* Global styles */
@@ -50,6 +49,164 @@ textarea {
 		font-size: 20px;
 		line-height: 26px;
 		color: $nav;
+	}
+}
+
+header {
+	background-image: url(../images/header-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	margin-top: 121px;
+	height: 100vh;
+	.mobile-logo {
+		display: none;
+	}
+	@media (min-width: 1060px) and (max-width: 1400px) {
+		height: auto;
+		background-position: 80%;
+		padding-bottom: 65px;
+	}
+	.call-action {
+		padding-top: 19vh;
+		@media (min-width: 1060px) and (max-width: 1400px) {
+			padding-top: 17vh;
+		}
+	}
+	.btn {
+		margin-top: 34px;
+		margin-left: 100px;
+	}
+	.scroll-down {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -40px;
+	}
+	.text-bottom {
+		color: #796c6c;
+		font-size: 20px;
+		line-height: 26px;
+		position: relative;
+		margin-top: 58px;
+		padding-left: 98px;
+		padding-right: 180px;
+		text-transform: none;
+		font-family: $text;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 12px;
+			left: 0;
+			background-color: #796C6C;
+			height: 1px;
+			width: 68px;
+		}
+	}
+}
+
+p {
+	strong {
+		font-family: $text-bold;
+		color: $allert;
+	}
+}
+
+.title {
+	font-family: $title;
+	font-size: 11px;
+	letter-spacing: 0.5em;
+	text-transform: uppercase;
+	padding-bottom: 40px;
+	position: relative;
+	color: $title-cl;
+	margin-bottom: 60px;
+	&:before {
+		content: "";
+		position: absolute;
+		background-color: $title-cl;
+		width: 28px;
+		height: 1px;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+	}
+}
+
+.big-title {
+	text-align: center;
+	font-family: $title;
+	font-size: 48px;
+	line-height: 48px;
+	position: relative;
+	padding: 32px 0;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $line;
+		width: 83px;
+		height: 1px;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background-color: $line;
+		width: 83px;
+		height: 1px;
+	}
+}
+
+.smile {
+	padding: 200px 0 100px 0;
+	background-image: url(../images/perfect-smile-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	.perfect-smile {
+		text-align: center;
+		h3 {
+			font-size: 48px;
+			line-height: 48px;
+			margin-top: 105px;
+			margin-bottom: 28px;
+		}
+	}
+	p {
+		color: $text-alt;
+		font-size: 20px;
+		line-height: 26px;
+		margin-bottom: 18px;
+	}
+	.image-wrapped {
+		text-align: right;
+		margin-bottom: 60px;
+	}
+	.cabinet-wrapped {
+		min-height: 1px;
+		img {
+			position: absolute;
+			right: 0;
+		}
+	}
+	h3 {
+		font-size: 30px;
+		line-height: 26px;
+		margin-bottom: 20px;
+	}
+	.cabinet-desk {
+		margin-top: 75px;
+		h3 {
+			font-family: $text-bold;
+			margin-bottom: 20px;
+			margin-top: 40px;
+		}
+		p {
+			margin-bottom: 10px;
+		}
 	}
 }
 
@@ -194,6 +351,7 @@ input {
 
 .navigation {
 	padding: 30px 0 40px 0;
+	transition: padding 0.4s;
 	.phone-number {
 		color: $nav;
 		font-family: $text-bold;
@@ -210,6 +368,10 @@ input {
 	}
 }
 
+.navigation-fixed {
+	padding: 10px 0;
+}
+
 .navigation-list {
 	display: flex;
 	flex-direction: row;
@@ -220,55 +382,6 @@ input {
 	}
 	a {
 		color: $nav;
-	}
-}
-
-header {
-	background-image: url(../images/header-bg.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	margin-top: 121px;
-	height: 100vh;
-	@media (min-width: 1060px) and (max-width: 1400px) {
-		height: 76vh;
-		background-position: 80%;
-	}
-	.call-action {
-		padding-top: 19vh;
-		@media (min-width: 1060px) and (max-width: 1400px) {
-			padding-top: 25vh;
-		}
-	}
-	.btn {
-		margin-top: 34px;
-		margin-left: 100px;
-	}
-	.scroll-down {
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-		bottom: -40px;
-	}
-	.text-bottom {
-		color: #796c6c;
-		font-size: 20px;
-		line-height: 26px;
-		position: relative;
-		margin-top: 58px;
-		padding-left: 98px;
-		padding-right: 180px;
-		text-transform: none;
-		font-family: $text;
-		&:before {
-			content: "";
-			position: absolute;
-			top: 12px;
-			left: 0;
-			background-color: #796C6C;
-			height: 1px;
-			width: 68px;
-		}
 	}
 }
 
@@ -351,6 +464,36 @@ header {
 	h1 {
 		font-size: 28px;
 		line-height: 32px;
+	}
+
+	.smile {
+		padding: 40px 0 0 0;
+		p {
+			font-size: 16px;
+			line-height: 20px;
+			margin-bottom: 15px;
+		}
+		.perfect-smile {
+			h3 {
+				font-size: 30px;
+				line-height: 34px;
+				margin-top: 0;
+			}
+		}
+		.image-wrapped {
+			text-align: center;
+			margin-bottom: 0;
+			img {
+				width: 70%;
+			}
+		}
+		.cabinet-wrapped {
+			display: none;
+		}
+		.cabinet-desk {
+			margin-top: 10px;
+			text-align: center;
+		}
 	}
 	.navigation {
 		overflow: hidden;
@@ -456,11 +599,12 @@ header {
 		margin-right: auto;
 	}
 	header {
-		background-position: 66% 80px;
+		background-position: 66% 0;
 		background-size: cover;
 		position: relative;
 		background-color: #fbfbfb;
 		height: auto;
+		margin-top: 0;
 		&:before {
 			content: "";
 			position: absolute;
@@ -533,3 +677,7 @@ header {
 @include phone-landscape {
 
 }
+
+@import "inc/fonts";
+@import "inc/grid";
+@import "inc/base_styles";
