@@ -439,7 +439,7 @@ input {
       .smile .image-wrapped img {
         width: 70%; }
     .smile .cabinet-wrapped {
-      display: none; }
+      display: none !important; }
     .smile .cabinet-desk {
       margin-top: 10px;
       text-align: center; }

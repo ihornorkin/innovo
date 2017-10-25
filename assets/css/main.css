@@ -2925,7 +2925,7 @@ input {
       .smile .image-wrapped img {
         width: 70%; }
     .smile .cabinet-wrapped {
-      display: none; }
+      display: none !important; }
     .smile .cabinet-desk {
       margin-top: 10px;
       text-align: center; }
@@ -5077,7 +5077,7 @@ input {
       .team .slide img {
         width: 262px;
         position: absolute;
-        top: 150px;
+        top: 160px;
         left: 50%;
         -webkit-transform: translateX(-50%);
             -ms-transform: translateX(-50%);
