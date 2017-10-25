@@ -229,6 +229,16 @@
 				padding-right: 15px;
 			}
 		}
+		.item-tablet {
+			.item:first-child {
+				flex-grow: 1;
+				width: 100%;
+				padding-left: 0;
+				margin-right: 25%;
+				margin-left: 25%;
+				margin-bottom: 0;
+			}
+		}
 	}
 
 .team {
@@ -599,6 +609,12 @@ img {
 		}
 		.emotion-wrapped {
 			display: none !important;
+		}
+		.doctors-content {
+			p {
+				font-size: 18px;
+				line-height: 22px;
+			}
 		}
 	}
 

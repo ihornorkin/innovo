@@ -67,8 +67,8 @@ $('#team-slider').slick({
   {
     breakpoint: 769,
     settings: {
-      adaptiveHeight: true,
-      dots: false
+      adaptiveHeight: false,
+      dots: true
     }
   }
   ]
